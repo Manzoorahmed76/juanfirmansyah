@@ -3,7 +3,7 @@ import React from 'react';
 function SidebarRight() {
   return (
     <section>
-      <div className="absolute h-[270px] bottom-0 right-0">
+      <div className="fixed h-[270px] bottom-0 right-0 z-50 font-firacode font-thin text-sm">
         <div className="flex flex-col gap-6 justify-center items-center w-44 h-full mx-auto text-white">
           <a
             href="mailto:juanfirmansyah.jf@gmail.com"
