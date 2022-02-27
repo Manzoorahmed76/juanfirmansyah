@@ -30,7 +30,7 @@ function Banner() {
     }
     if (!inView) {
       animation.start({
-        x: '-200px',
+        x: '-50px',
         opacity: 0,
       }),
         animation2.start({
@@ -91,19 +91,19 @@ function Banner() {
             animate={animation2}
             className="relative h-96 md:h-full w-full -mt-56 md:mt-72 ml-16 md:ml-[500px] shadow-2xl overflow-hidden "
           >
-            <Image src={'/juan4.jpg'} layout="fill" objectFit="cover" />
+            <Image src={'/juan3.jpg'} layout="fill" objectFit="cover" />
           </motion.div>
           <motion.div
             animate={animation2}
             className="relative h-96 md:h-full w-full mt-0 shadow-2xl overflow-hidden"
           >
-            <Image src={'/juan3.png'} layout="fill" objectFit="cover" />
+            <Image src={'/juan2.png'} layout="fill" objectFit="cover" />
           </motion.div>
           <motion.div
             animate={animation2}
             className="relative h-96 md:h-full w-full -mt-56 md:mt-72 shadow-2xl overflow-hidden"
           >
-            <Image src={'/juan1.jpg'} layout="fill" objectFit="cover" />
+            <Image src={'/juan1.JPG'} layout="fill" objectFit="cover" />
           </motion.div>
         </div>
       </div>

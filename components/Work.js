@@ -30,7 +30,7 @@ export default function Work() {
     }
     if (!inView) {
       animation.start({
-        x: '-200px',
+        x: '-50px',
         opacity: 0,
       }),
         animation2.start({

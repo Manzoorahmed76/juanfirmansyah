@@ -19,29 +19,17 @@ export default function Contact() {
           type: 'spring',
           duration: 7,
         },
-      }),
-        animation2.start({
-          y: 0,
-          opacity: 1,
-          transition: {
-            type: 'spring',
-            duration: 4,
-          },
-        });
+      });
     }
     if (!inView) {
       animation.start({
-        x: '-200px',
+        x: '-50px',
         opacity: 0,
-      }),
-        animation2.start({
-          y: '200px',
-          opacity: 0,
-        });
+      });
     }
   }, [inView]);
   return (
-    <section>
+    <section ref={ref}>
       <div className="flex flex-col md:max-w-6xl max-w-xs h-screen m-auto text-left">
         <motion.div
           animate={animation}
