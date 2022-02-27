@@ -17,35 +17,35 @@ export default function Work() {
           <div className="flex flex-wrap flex-1 w-full h-full text-white md:mt-0 bg-gray-700 text-2xl">
             <Link href="https://www.aicocreative.com/">
               <div className="w-full h-1/4 md:h-1/5 bg-bg-1 bg-cover">
-                <h3 className="w-full h-full font-semibold hover:bg-black hover:bg-opacity-50 text-white drop-shadow-md transform transition-all pt-10 opacity-0 hover:opacity-100 hover:pt-14 delay-100 z-10">
+                <h3 className="w-full h-full font-semibold hover:bg-black hover:bg-opacity-50 text-white drop-shadow-md transform transition-all pt-10 opacity-0 hover:opacity-100 hover:pt-4 md:hover:pt-14 delay-100 z-10">
                   Aico Creative
                 </h3>
               </div>
             </Link>
             <Link href="https://clone-60078.firebaseapp.com/">
               <div className="w-full h-1/4 md:h-1/5 bg-bg-4 bg-cover">
-                <h3 className="w-full h-full font-semibold hover:bg-gray-600 hover:bg-opacity-50 text-white drop-shadow-md transform transition-all pt-10 opacity-0 hover:opacity-100 hover:pt-14 delay-100 z-10">
+                <h3 className="w-full h-full font-semibold hover:bg-gray-600 hover:bg-opacity-50 text-white drop-shadow-md transform transition-all pt-10 opacity-0 hover:opacity-100 hover:pt-4 md:hover:pt-14 delay-100 z-10">
                   Google <span className="font-firacode text-xs">clone</span>
                 </h3>
               </div>
             </Link>
             <Link href="https://netflix-clone-7d963.firebaseapp.com/">
               <div className="w-full h-1/4 md:h-1/5 bg-bg-2 bg-cover justify-center">
-                <h3 className="w-full h-full font-semibold hover:bg-gray-600 hover:bg-opacity-50 text-white drop-shadow-md transform transition-all pt-10 opacity-0 hover:opacity-100 hover:pt-14 delay-100 z-10">
+                <h3 className="w-full h-full font-semibold hover:bg-gray-600 hover:bg-opacity-50 text-white drop-shadow-md transform transition-all pt-10 opacity-0 hover:opacity-100 hover:pt-4 md:hover:pt-14 delay-100 z-10">
                   Netflix <span className="font-firacode text-xs">clone</span>
                 </h3>
               </div>
             </Link>
             <Link href="https://airbnb-clone-eta-six.vercel.app/">
               <div className="w-full h-1/4 md:h-1/5 bg-bg-3 bg-cover">
-                <h3 className="w-full h-full font-semibold hover:bg-gray-600 hover:bg-opacity-50 text-white drop-shadow-md transform transition-all pt-10 opacity-0 hover:opacity-100 hover:pt-14 delay-100 z-10">
+                <h3 className="w-full h-full font-semibold hover:bg-gray-600 hover:bg-opacity-50 text-white drop-shadow-md transform transition-all pt-10 opacity-0 hover:opacity-100 hover:pt-4 md:hover:pt-14 delay-100 z-10">
                   Airbnb <span className="font-firacode text-xs">clone</span>
                 </h3>
               </div>
             </Link>
             <Link href="https://amazon-clone-6d9f7.firebaseapp.com/">
               <div className="w-full h-1/4 md:h-1/5 bg-bg-5 bg-blue-700 ">
-                <h3 className="w-full h-full font-semibold hover:bg-gray-600 hover:bg-opacity-50 text-white drop-shadow-md transform transition-all pt-10 opacity-0 hover:opacity-100 hover:pt-14 delay-100 z-10">
+                <h3 className="w-full h-full font-semibold hover:bg-gray-600 hover:bg-opacity-50 text-white drop-shadow-md transform transition-all pt-10 opacity-0 hover:opacity-100 hover:pt-4 md:hover:pt-14 delay-100 z-10">
                   Amazon <span className="font-firacode text-xs">clone</span>
                 </h3>
               </div>
