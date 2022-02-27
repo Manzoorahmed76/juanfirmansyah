@@ -5,7 +5,7 @@ import { useState } from 'react';
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <header className="fixed w-full h-full top-0 z-20 font-firacode">
+    <header className="fixed w-full h-auto top-0 z-50 font-firacode">
       <div className="flex flex-col md:flex-row w-full h-20 justify-between items-center px-10">
         <div className="flex flex-wrap content-center h-full w-26 z-50">
           <h1 className="text-2xl text-white">J U A N</h1>

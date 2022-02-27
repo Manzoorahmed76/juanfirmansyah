@@ -5,7 +5,7 @@ function SidebarLeft() {
   return (
     <section>
       <div className="fixed h-[270px] bottom-0 left-0 z-50">
-        <div className="flex flex-col gap-6 justify-center w-10 md:w-44 h-full text-white items-center pt-14">
+        <div className="flex flex-col gap-6 justify-center w-10 md:w-32 h-full text-white items-center pt-14">
           <a
             href="https://github.com/JuanFirmansyah"
             aria-label="Github"

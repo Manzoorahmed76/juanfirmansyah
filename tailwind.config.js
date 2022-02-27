@@ -9,7 +9,11 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        'dog-img': "url('/banner.jpg')",
+        'bg-1': "url('/aico-creative.png')",
+        'bg-2': "url('/netflix-clone.png')",
+        'bg-3': "url('/airbnb-clone.png')",
+        'bg-4': "url('/google-clone.png')",
+        'bg-5': "url('/google-clone.png')",
       },
     },
   },

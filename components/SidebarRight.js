@@ -4,7 +4,7 @@ function SidebarRight() {
   return (
     <section>
       <div className="fixed h-[270px] bottom-0 right-0 z-50 font-firacode font-thin text-sm">
-        <div className="flex flex-col gap-6 justify-center items-center w-10 md:w-44 h-full mx-auto text-white">
+        <div className="flex flex-col gap-6 justify-center items-center w-10 md:w-32 h-full mx-auto text-white">
           <a
             href="mailto:juanfirmansyah.jf@gmail.com"
             className="flex items-center h-96 rotate-90"
