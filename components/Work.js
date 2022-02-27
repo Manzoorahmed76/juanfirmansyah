@@ -1,11 +1,51 @@
 import React from 'react';
 import Image from 'next/image';
+import { useInView } from 'react-intersection-observer';
+import { useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 
 export default function Work() {
+  const { ref, inView } = useInView({ threshold: 0.3 });
+  const animation = useAnimation();
+  const animation2 = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      animation.start({
+        x: 0,
+        opacity: 1,
+        transition: {
+          type: 'spring',
+          duration: 7,
+        },
+      }),
+        animation2.start({
+          x: 0,
+          opacity: 1,
+          transition: {
+            type: 'spring',
+            duration: 4,
+          },
+        });
+    }
+    if (!inView) {
+      animation.start({
+        x: '-200px',
+        opacity: 0,
+      }),
+        animation2.start({
+          x: '800px',
+          opacity: 0,
+        });
+    }
+  }, [inView]);
   return (
-    <section>
-      <div className="flex flex-col max-w-full md:max-w-6xl h-screen m-auto mt-28">
-        <div className="absolute max-w-full md:max-w-7xl text-white text-left mt-16 z-50">
+    <section ref={ref}>
+      <div className="flex flex-col max-w-full h-screen m-auto mt-28">
+        <motion.div
+          animate={animation}
+          className="absolute max-w-full md:max-w-6xl text-white text-left mt-16 z-50 md:ml-44 ml-0"
+        >
           <h2 className="w-full h-auto text-4xl md:text-9xl tracking-wide font-semibold text-white ml-10 md:ml-0">
             Work
           </h2>
@@ -51,15 +91,18 @@ export default function Work() {
               </div>
             </div>
           </div>
-        </div>
-        <div className="flex justify-center md:justify-end w-full h-full translate-x-0 md:translate-x-[640px] z-20">
+        </motion.div>
+        <motion.div
+          animate={animation2}
+          className="flex justify-center md:justify-end w-full h-full z-20 ml-0 md:ml-[600px]"
+        >
           <div className="relative w-full h-[500px] md:h-full mt-48 md:mt-0 overflow-hidden shadow-2xl">
-            <div className="absolute w-full bg-gray-900 h-full z-20 opacity-90 hover:opacity-90 md:hover:opacity-40 transition-all delay-150 ease-in-out"></div>
+            <div className="absolute w-full bg-gray-900 h-full z-20 opacity-90  transition-all delay-150 ease-in-out"></div>
             <div className="w-full h-full">
               <Image src="/airkami.png" alt="Air Kami" layout="fill" />
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

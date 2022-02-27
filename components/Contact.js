@@ -1,8 +1,45 @@
 import Link from 'next/link';
 import React from 'react';
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { useInView } from 'react-intersection-observer';
+import { useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 
 export default function Contact() {
+  const { ref, inView } = useInView({ threshold: 0.3 });
+  const animation = useAnimation();
+  const animation2 = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      animation.start({
+        x: 0,
+        opacity: 1,
+        transition: {
+          type: 'spring',
+          duration: 7,
+        },
+      }),
+        animation2.start({
+          y: 0,
+          opacity: 1,
+          transition: {
+            type: 'spring',
+            duration: 4,
+          },
+        });
+    }
+    if (!inView) {
+      animation.start({
+        x: '-200px',
+        opacity: 0,
+      }),
+        animation2.start({
+          y: '200px',
+          opacity: 0,
+        });
+    }
+  }, [inView]);
   return (
     <section>
       <div className="flex flex-col md:max-w-6xl max-w-xs h-screen m-auto text-left">

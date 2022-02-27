@@ -13,7 +13,7 @@ module.exports = {
         'bg-2': "url('/netflix-clone.png')",
         'bg-3': "url('/airbnb-clone.png')",
         'bg-4': "url('/google-clone.png')",
-        'bg-5': "url('/google-clone.png')",
+        'bg-5': "url('/amazon-clone.png')",
       },
     },
   },

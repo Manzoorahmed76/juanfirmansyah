@@ -1,9 +1,46 @@
 import React from 'react';
 import Link from 'next/link';
 import { useState } from 'react';
+import { useInView } from 'react-intersection-observer';
+import { useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const { ref, inView } = useInView({ threshold: 0.3 });
+  const animation = useAnimation();
+  const animation2 = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      animation.start({
+        x: 0,
+        opacity: 1,
+        transition: {
+          type: 'spring',
+          duration: 7,
+        },
+      }),
+        animation2.start({
+          y: 0,
+          opacity: 1,
+          transition: {
+            type: 'spring',
+            duration: 4,
+          },
+        });
+    }
+    if (!inView) {
+      animation.start({
+        x: '-200px',
+        opacity: 0,
+      }),
+        animation2.start({
+          y: '200px',
+          opacity: 0,
+        });
+    }
+  }, [inView]);
   return (
     <header className="fixed w-full h-auto top-0 z-50 font-firacode">
       <div className="flex flex-col md:flex-row w-full h-20 justify-between items-center px-10">

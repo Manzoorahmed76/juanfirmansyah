@@ -1,10 +1,50 @@
 import React from 'react';
+import { useInView } from 'react-intersection-observer';
+import { useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 
 export default function About() {
+  const { ref, inView } = useInView({ threshold: 0.3 });
+  const animation = useAnimation();
+  const animation2 = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      animation.start({
+        x: 0,
+        opacity: 1,
+        transition: {
+          type: 'spring',
+          duration: 7,
+        },
+      }),
+        animation2.start({
+          y: 0,
+          opacity: 1,
+          transition: {
+            type: 'spring',
+            duration: 4,
+          },
+        });
+    }
+    if (!inView) {
+      animation.start({
+        x: '-200px',
+        opacity: 0,
+      }),
+        animation2.start({
+          y: '200px',
+          opacity: 0,
+        });
+    }
+  }, [inView]);
   return (
-    <section>
+    <section ref={ref}>
       <div className="flex flex-col max-w-xs md:max-w-6xl h-screen justify-center mx-0 md:mx-auto text-left pl-10 md:pl-0 mt-20">
-        <div className="absolute max-w-2xl text-white">
+        <motion.div
+          animate={animation}
+          className="absolute max-w-2xl text-white"
+        >
           <h2 className="text-4xl md:text-9xl tracking-wide font-semibold">
             About Me
           </h2>
@@ -46,7 +86,7 @@ export default function About() {
             <li>▹ Photoshop</li>
             <li>▹ Premiere Pro</li>
           </ul>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

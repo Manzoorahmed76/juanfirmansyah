@@ -23,7 +23,7 @@ export default function Home() {
           ></link>
         </Head>
 
-        <body className="flex flex-col justify-center w-full h-auto text-center bg-gradient-to-tr from-black via-[#071F3D] to-[#405369] overflow-x-hidden">
+        <body className="flex flex-col justify-center w-full h-auto text-center bg-gradient-to-tr from-[#ce4624] via-[#071F3D] to-[#405369] overflow-x-hidden">
           <Header />
 
           {/* Banner */}
