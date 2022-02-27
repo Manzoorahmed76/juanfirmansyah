@@ -43,7 +43,10 @@ export default function Contact() {
   return (
     <section>
       <div className="flex flex-col md:max-w-6xl max-w-xs h-screen m-auto text-left">
-        <div className="absolute max-w-4xl text-white mt-24 pr-6 md:pr-0 pl-1 md:pl-0 ">
+        <motion.div
+          animate={animation}
+          className="absolute max-w-4xl text-white mt-24 pr-6 md:pr-0 pl-1 md:pl-0 "
+        >
           <h2 className="text-4xl md:text-9xl tracking-wide font-semibold text-white">
             Get In Touch
           </h2>
@@ -92,7 +95,7 @@ export default function Contact() {
               </li>
             </ul>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
