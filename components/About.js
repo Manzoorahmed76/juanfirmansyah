@@ -3,7 +3,7 @@ import { useInView } from 'react-intersection-observer';
 import { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 
-export default function About() {
+export default function About(props) {
   const { ref, inView } = useInView({ threshold: 0.3 });
   const animation = useAnimation();
   const animation2 = useAnimation();

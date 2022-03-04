@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 
-export default function Work() {
+export default function Work(props) {
   const { ref, inView } = useInView({ threshold: 0.3 });
   const animation = useAnimation();
   const animation2 = useAnimation();
@@ -40,7 +40,7 @@ export default function Work() {
     }
   }, [inView]);
   return (
-    <section ref={ref}>
+    <section ref={ref} ref={props.refMostPicked}>
       <div className="flex flex-col max-w-full h-screen m-auto mt-28">
         <motion.div
           animate={animation}

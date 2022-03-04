@@ -11,6 +11,13 @@ function Header() {
   const animation = useAnimation();
   const animation2 = useAnimation();
 
+  let Links = [
+    { name: 'About', link: '/about' },
+    { name: 'Experience', link: '/experience' },
+    { name: 'Work', link: '/work' },
+    { name: 'Contact', link: '/contact' },
+  ];
+
   useEffect(() => {
     if (inView) {
       animation.start({
@@ -41,34 +48,57 @@ function Header() {
         });
     }
   }, [inView]);
+
   return (
     <header className="fixed w-full h-auto top-0 z-50 font-firacode">
-      <div className="flex flex-col md:flex-row w-full h-20 justify-between items-center px-10">
-        <div className="flex flex-wrap content-center h-full w-26 z-50">
-          <h1 className="text-2xl text-white">J U A N</h1>
+      <div className="flex flex-col md:flex-row justify-between items-center px-4 md:px-10 pt-3">
+        <div className="flex items-center justify-between flex-wrap content-center h-full w-full z-50 text-sm">
+          <div>
+            <h1 className="text-2xl text-white">J U A N</h1>
+          </div>
+          <div>
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-white block md:hidden"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  className={!isOpen ? 'block' : 'hidden'}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+                <path
+                  className={isOpen ? 'block' : 'hidden'}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
-        <div>
-          <ul className="flex w-full h-full text-sm font-thin items-center text-white">
-            <li>
-              <a className="w-full h-full px-8">
-                1. <span className="text-[#B4BEDE]">About</span>
-              </a>
-            </li>
-            <li>
-              <a className="w-full h-full px-8">
-                2. <span className="text-[#B4BEDE]">Experience</span>
-              </a>
-            </li>
-            <li>
-              <a className="w-full h-full px-8">
-                3. <span className="text-[#B4BEDE]">Work</span>
-              </a>
-            </li>
-            <li>
-              <a className="w-full h-full px-8">
-                4. <span className="text-[#B4BEDE]">Contact</span>
-              </a>
-            </li>
+
+        <div
+          className={`${
+            isOpen
+              ? '-translate-y-0'
+              : '-translate-y-2 opacity-0 md:-translate-x-0 md:opacity-100'
+          } md:flex flex-col md:flex-row justify-end w-full h-full container transition-all duration-500 ease-in`}
+        >
+          <ul className="flex flex-row text-sm font-thin justify-center items-center text-white gap-x-10">
+            {Links.map((Link) => (
+              <li key={Link.name} className="block py-5">
+                {Link.name}
+              </li>
+            ))}
           </ul>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import React from 'react';
+import React, { Component } from 'react';
 import Header from '../components/Header';
 import Banner from '../components/Banner';
 import SidebarLeft from '../components/SidebarLeft';
@@ -9,11 +9,16 @@ import About from '../components/About';
 import Work from '../components/Work';
 import Build from '../components/Build';
 import Contact from '../components/Contact';
+import { FaTableTennis } from 'react-icons/fa';
 
-export default function Home() {
-  return (
-    <>
-      <div className="">
+export default class LandingPage extends Component {
+  constructor(props) {
+    super(props);
+    this.refMostPicked = React.createRef();
+  }
+  render() {
+    return (
+      <>
         <Head>
           <title>Juan Firmansyah </title>
           <link rel="icon" href="/juan-favicon.svg" />
@@ -40,7 +45,7 @@ export default function Home() {
 
           {/* Education */}
         </body>
-      </div>
-    </>
-  );
+      </>
+    );
+  }
 }
