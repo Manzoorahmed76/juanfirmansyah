@@ -44,7 +44,7 @@ export default function Work(props) {
   }, [inView]);
 
   return (
-    <section ref={ref}>
+    <section ref={ref} id="build">
       <div className="flex flex-col md:flex-row w-full h-screen mt-28">
         <div className="flex flex-col w-full md:w-1/2 md:h-full text-center md:text-left text-white justify-center z-50 pl-0 md:pl-44 ">
           <motion.h2

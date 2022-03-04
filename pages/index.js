@@ -1,14 +1,14 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import React, { Component } from 'react';
-import Header from '../components/Header';
-import Banner from '../components/Banner';
-import SidebarLeft from '../components/SidebarLeft';
-import SidebarRight from '../components/SidebarRight';
-import About from '../components/About';
-import Work from '../components/Work';
-import Build from '../components/Build';
-import Contact from '../components/Contact';
+import Header from '..//components/Header';
+import Banner from '..//components/Banner';
+import SidebarLeft from '..//components/SidebarLeft';
+import SidebarRight from '..//components/SidebarRight';
+import About from '..//components/About';
+import Work from '..//components/Work';
+import Build from '..//components/Build';
+import Contact from '..//components/Contact';
 import { FaTableTennis } from 'react-icons/fa';
 
 export default class LandingPage extends Component {

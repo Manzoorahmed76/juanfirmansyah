@@ -40,7 +40,7 @@ export default function Work(props) {
     }
   }, [inView]);
   return (
-    <section ref={ref} ref={props.refMostPicked}>
+    <section ref={ref} id="experience">
       <div className="flex flex-col max-w-full h-screen m-auto mt-28">
         <motion.div
           animate={animation}

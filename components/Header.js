@@ -11,13 +11,6 @@ function Header() {
   const animation = useAnimation();
   const animation2 = useAnimation();
 
-  let Links = [
-    { name: 'About', link: '/about' },
-    { name: 'Experience', link: '/experience' },
-    { name: 'Work', link: '/work' },
-    { name: 'Contact', link: '/contact' },
-  ];
-
   useEffect(() => {
     if (inView) {
       animation.start({
@@ -94,11 +87,26 @@ function Header() {
           } md:flex flex-col md:flex-row justify-end w-full h-full container transition-all duration-500 ease-in`}
         >
           <ul className="flex flex-row text-sm font-thin justify-center items-center text-white gap-x-10">
-            {Links.map((Link) => (
-              <li key={Link.name} className="block py-5">
-                {Link.name}
-              </li>
-            ))}
+            <li className="block py-5">
+              <Link href="#about">
+                <a>About</a>
+              </Link>
+            </li>
+            <li className="block py-5">
+              <Link href="#experience">
+                <a>Experience</a>
+              </Link>
+            </li>
+            <li className="block py-5">
+              <Link href="#build">
+                <a>Build</a>
+              </Link>
+            </li>
+            <li className="block py-5">
+              <Link href="#contact">
+                <a>Contact</a>
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

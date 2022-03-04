@@ -29,7 +29,7 @@ export default function Contact(props) {
     }
   }, [inView]);
   return (
-    <section ref={ref}>
+    <section ref={ref} id="contact">
       <div className="flex flex-col md:max-w-6xl max-w-xs h-screen m-auto text-left">
         <motion.div
           animate={animation}

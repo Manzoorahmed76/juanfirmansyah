@@ -39,7 +39,7 @@ export default function About(props) {
     }
   }, [inView]);
   return (
-    <section ref={ref}>
+    <section ref={ref} id="about">
       <div className="flex flex-col max-w-xs md:max-w-6xl h-screen justify-center mx-0 md:mx-auto text-left pl-10 md:pl-0 mt-20">
         <motion.div
           animate={animation}
