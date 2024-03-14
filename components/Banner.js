@@ -54,13 +54,13 @@ function Banner() {
               animate={animation}
               className="max-w-3xl h-auto text-4xl md:text-7xl font-bold tracking-wider pt-4"
             >
-              JUAN FIRMANSYAH
+              MaNzOoR AhMeD
             </motion.h2>
             <motion.h3
               animate={animation}
               className="w-full h-auto text-xl md:text-4xl pt-3"
             >
-              I'm web developer.
+              I'm web developer. and graphics designer
             </motion.h3>
             <motion.div
               animate={animation}
@@ -74,8 +74,7 @@ function Banner() {
               animate={animation}
               className="max-w-md mt-10 brightness-75 tracking-widest text-md md:text-lg"
             >
-              I'm a web developer specializing in design and developing website.
-              Currently, I'm focused on front-end developer.
+              Hi My Nick name is Mr BaBlU & I am a 18 year old child, I Love web designing                   graphics designing Python Prigramming. Hacking Greetings everyone!,
             </motion.p>
             <motion.button
               animate={animation}
